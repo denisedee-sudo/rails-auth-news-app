@@ -1,14 +1,10 @@
 Rails.application.routes.draw do
   get 'users/index'
-
   get 'users/show'
-
   get 'users/create'
-
   get '/signup' => 'users#new'
-
+  get '/login' => 'sessions#new'
   get 'users/update'
-
   get 'users/destroy'
   resources :users
   resources :articles

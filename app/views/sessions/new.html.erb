@@ -3,12 +3,11 @@
     <div class="container text-center p-5">
         <div class="card text-white bg-dark mb-3 p-5">
             <div class="card-header">
-              <h1 class="text-center" >SIGNUP</h1>
+              <h1 class="text-center" >LOGIN</h1>
             </div>
               <div class="card-body">
                   <div class="form-group">
-                      <%= form_for(@user) do |form| %>
-                        <%= form.text_field :name, class: "form-control", :placeholder => "Name" %> <br/>
+                      <%= form_for(:session, url: login_path) do |form| %>
                         <%= form.email_field :email, class: "form-control", :placeholder => "Email" %> <br/> 
                         <%= form.password_field :password, class: "form-control", :placeholder => "Password" %> <br/>
                           <%= form.submit "Signup", class: "btn btn-primary w-100" %>
